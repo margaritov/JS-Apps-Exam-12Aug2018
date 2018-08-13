@@ -1,0 +1,25 @@
+{{> navigation}}
+<div class="listing-details">
+    <div class="my-listing-details">
+        <p id="auto-title">{{listing.title}}</p>
+        <img src="{{listing.imageUrl}}">
+        <div class="listing-props">
+            <h2>Brand: {{listing.brand}}</h2>
+            <h3>Model: {{listing.model}}</h3>
+            <h3>Year: {{listing.year}}</h3>
+            <h3>Fuel: {{listing.fuelType}}</h3>
+            <h3>Price: {{listing.price}}</h3>
+        </div>
+        <div class="listings-buttons">
+            {{#if listing.isAuthor}}
+                <a href="#/edit/{{listing._id}}" class="button-list">Edit</a>
+                <a href="#/delete/{{listing._id}}" class="button-list">Delete</a>
+            {{/if}}
+
+        </div>
+        <p id="description-title">Description:</p>
+        <p id="description-para">{{listing.description}}</p>
+
+    </div>
+</div>
+{{>footer}}
